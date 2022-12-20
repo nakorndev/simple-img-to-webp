@@ -1,14 +1,17 @@
 {
-  "name": "i2w",
+  "name": "simple-img-to-webp",
   "version": "1.0.0",
   "engines": {
     "node": "16.x"
+  },
+  "bin": {
+    "i2w": "./bin/src/index.js"
   },
   "description": "This is simple as title for bulk convert entire of selected directory to make all image extension into webp 95% quality.",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node src/index.ts",
-    "prepublish": "tsc"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

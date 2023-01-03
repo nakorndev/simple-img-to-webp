@@ -24,7 +24,7 @@ program
     }
     const result = await Promise.allSettled(files.map(async (file) => {
       const currentFile = path.join(pathArg, file)
-      const targetFile = path.join(outputDir, `${path.parse(file.replace(/\s/g, '_')).name}.webp`)
+      const targetFile = path.join(outputDir, `${path.parse(file.replace(/\s|-/g, '_')).name}.webp`)
       try {
         await sharp(currentFile)
           .webp({ quality: 95 })
